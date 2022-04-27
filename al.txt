@@ -1,0 +1,295 @@
+import java.util.*;
+public class MyClass {
+    public static void main(String args[]) {
+      
+    List<String> al=new ArrayList<String>();
+    al.add("Vijay");
+    al.add("Ajay");
+    al.add("Maven");
+    al.add("Sarin");
+    al.add("Vijay");
+    al.set(2,"Arghya");
+    al.remove(3);
+    
+    Iterator<String> itr=al.iterator();
+    while(itr.hasNext())
+    {
+        System.out.println(itr.next());
+    }
+     System.out.println(al.get(3));
+    }
+}
+
+
+
+import java.util.*;
+public class MyClass {
+    public static void main(String args[]) {
+      
+    List<Character> al=new ArrayList<Character>();
+    al.add('A');
+    al.add('B');
+    al.add('C');
+    al.add('D');
+    al.add('E');
+    System.out.println(al+" "+al.size());
+    
+    for(int i=0;i<3;i++)
+    {
+        al.add(2,(char)('x'+i));
+    }
+    System.out.println(al+" "+al.size());
+    
+    for(int i=0;i<3;i++)
+    {
+        al.remove(2);
+    }
+    System.out.println(al+" "+al.size());
+   
+    for(int i=0;i<al.size();i++)
+    {
+        al.set(i,Character.toLowerCase(al.get(i)));
+    }
+    System.out.println(al+" "+al.size());
+    
+    Iterator<Character> itr=al.iterator();
+    while(itr.hasNext())
+    {
+        System.out.println(itr.next());
+    }
+     //System.out.println(al.get(3));
+    
+    int idx=al.indexOf('d');
+    if(idx>=0)
+    {
+    al.remove(idx);
+    }
+    System.out.println(al+" "+al.size());
+    al.clear();
+    System.out.println(al+" "+al.size());
+    
+    for(int i=0;i<10;i++)
+    al.add((char)('0'+i));
+    System.out.println(al+" "+al.size());
+    }
+    
+}
+
+
+
+
+import java.util.*;
+public class MyClass {
+    public static void main(String args[]) {
+      
+    List<String> al=new ArrayList<String>();
+    al.add("Vijay");
+    al.add("Ajay");
+    al.add("Maven");
+    al.add("Sarin");
+    al.add("Vijay");
+    al.set(2,"Arghya");
+    al.remove(3);
+    
+    Iterator<String> itr=al.iterator();
+    while(itr.hasNext())
+    {
+        System.out.println(itr.next());
+    }
+    
+    System.out.println("----------------------");
+     //System.out.println(al.get(3));
+     String strArray[]=al.toArray(new String[al.size()]);
+    for(String s : strArray)
+    System.out.println(s);
+    }
+}
+
+
+
+import java.util.*;
+public class ArrayListContainsExample {
+    public static void main(String args[]) {
+        // initialize ArrayList  
+        ArrayList<Integer> al = new ArrayList<Integer>();
+        // add elements to ArrayList object
+        al.add(3);
+        al.add(17);
+        al.add(6);
+        al.add(9);
+        al.add(7);
+        // check if ArrayList contains element
+        if (al.contains(7)) {
+            System.out.println("7 was found in the list");
+        } else {
+            System.out.println("7 was not found in the list");
+        }
+    }
+}
+
+
+
+import java.util.*;
+
+ public class ConvertArrayToArrayList {
+    public static void main(String args[]) {
+          
+          /* Array Declaration and initialization*/
+   String citynames[]={"Boston", "Dallas", "New York", "Chicago"};
+
+   /*Array to ArrayList conversion*/
+   ArrayList<String> citylist= new ArrayList<String>(Arrays.asList(citynames));
+
+   /*Adding new elements to the converted List*/
+   citylist.add("San Francisco");
+   citylist.add("San jose");
+
+   /*Final ArrayList content display using for loop*/
+   for (String str: citylist)
+   {
+  System.out.println(str);
+          }
+  }
+} 
+
+
+
+
+
+import java.util.*;
+
+ public class ConvertArrayToArrayList {
+    public static void main(String args[]) {
+        
+            /* Array Declaration and initialization*/
+     String array[]={"AA", "BB", "CC", "DD"};
+
+     /*ArrayList declaration*/
+     ArrayList<String> arraylist= new ArrayList<String>();
+
+     /*Conversion*/
+     Collections.addAll(arraylist, array);
+
+     /*Adding new elements to the converted List*/
+     arraylist.add("Boston");
+     arraylist.add("Dallas");
+
+     /*Display array list*/
+     for (String str: arraylist)
+     {
+   System.out.println(str);
+     }
+  }
+}
+
+
+import java.util.*;
+ 
+public class ReverseArrayList
+{
+    public static void main(String[] args) 
+    {
+        //Creating an ArrayList object         
+        ArrayList<String> arrlist = new ArrayList<String>(); 
+ 
+        //Adding elements to ArrayList object 
+        arrlist.add("Apple");         
+        arrlist.add("Amazon");        
+        arrlist.add("Facebook");
+        arrlist.add("Google");
+        arrlist.add("IBM");         
+        arrlist.add("Tesla");
+                 
+        //Displaying ArrayList Before Reverse         
+        System.out.println("Before Reverse ArrayList:");         
+        System.out.println(arrlist);
+         
+        /*Reversing the list using 
+          Collections.reverse() method*/         
+        Collections.reverse(arrlist);
+         
+        //Displaying list after reverse         
+        System.out.println("After Reverse ArrayList:");         
+        System.out.println(arrlist);
+    }
+} 
+
+
+
+import java.util.*;
+
+ public class ArrayListDescendingSort {
+    public static void main(String args[]) {
+        
+       ArrayList<String> arraylist = new ArrayList<String>();
+    arraylist.add("Apple");
+    arraylist.add("Banana");
+    arraylist.add("Pear");
+    arraylist.add("Mango");
+
+    /*Unsorted List: ArrayList content before sorting*/
+    System.out.println("ArrayList Before Sorting:");
+    for(String str: arraylist){
+   System.out.println(str);
+  }
+
+    /* Sorting in decreasing (descending) order*/
+    Collections.sort(arraylist, Collections.reverseOrder());
+
+    /* Sorted List in reverse order*/
+    System.out.println("ArrayList in descending order:");
+    for(String str: arraylist){
+   System.out.println(str);
+    }
+  }
+}
+
+
+
+import java.util.*;
+
+ public class ArrayListDescendingSort2 {
+    public static void main(String args[]) {
+        
+       ArrayList<Integer> arraylist = new ArrayList<Integer>();
+    arraylist.add(1);
+    arraylist.add(13);
+    arraylist.add(89);
+    arraylist.add(45);
+
+    /*Unsorted List: ArrayList content before sorting*/
+    System.out.println("ArrayList Before Sorting:");
+    for(int num: arraylist){
+   System.out.println(num);
+  }
+
+    /* Sorting in decreasing (descending) order*/
+    Collections.sort(arraylist, Collections.reverseOrder());
+
+    /* Sorted List in reverse order*/
+    System.out.println("ArrayList in descending order:");
+    for(int num: arraylist){
+   System.out.println(num);
+  }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
